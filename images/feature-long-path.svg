@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="346.998" height="4911.825" viewBox="0 0 346.998 4911.825">
+  <g id="Group_1890" data-name="Group 1890" transform="translate(-793.633 -2252.175)">
+    <path id="Path_879" data-name="Path 879" d="M3281.417,7160.484c0-48.313,24.823-81.479,41.591-102.887,498.723-636.7-562.25-600.906-43.007-1307.023,537.524-730.978-545.017-692.4,0-1311.723s-566.679-878.373,0-1324.289c393.272-309.464,14.233-515.475-93.144-862.24" transform="translate(-2320)" fill="none" stroke="#adadad" stroke-width="1" stroke-dasharray="4 6"/>
+    <circle id="Ellipse_525" data-name="Ellipse 525" cx="4" cy="4" r="4" transform="translate(956 7156)" fill="#147aff"/>
+    <g id="Group_1889" data-name="Group 1889">
+      <g id="arrow-15" transform="translate(952.5 2445.436)">
+        <path id="Path_1647" data-name="Path 1647" d="M2653.84,1652.441h12v-12" transform="matrix(0.966, 0.259, -0.259, 0.966, -2135.729, -2271.409)" fill="none" stroke="#147aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <path id="Path_1648" data-name="Path 1648" d="M2653.84,1652.441h12v-12" transform="matrix(0.966, 0.259, -0.259, 0.966, -1183.229, 1443.027)" fill="none" stroke="#147aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_1649" data-name="Path 1649" d="M2653.84,1652.441h12v-12" transform="matrix(0.966, 0.259, -0.259, 0.966, -1183.229, 2775.027)" fill="none" stroke="#147aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_1651" data-name="Path 1651" d="M0,0H12V12" transform="matrix(-0.966, 0.259, -0.259, -0.966, 967.197, 5752.027)" fill="none" stroke="#147aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_1652" data-name="Path 1652" d="M0,0H12V12" transform="matrix(-0.966, 0.259, -0.259, -0.966, 968.197, 4440.027)" fill="none" stroke="#147aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="arrow-165" transform="matrix(0.951, 0.309, -0.309, 0.951, 956.13, 3104.525)">
+        <path id="Path_1653" data-name="Path 1653" d="M0,0H12V12" transform="matrix(-0.966, 0.259, -0.259, -0.966, 14.697, 11.591)" fill="none" stroke="#147aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <path id="Path_1650" data-name="Path 1650" d="M2653.84,1652.441h12v-12" transform="matrix(0.966, 0.259, -0.259, 0.966, -1183.229, 4133.027)" fill="none" stroke="#147aff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
