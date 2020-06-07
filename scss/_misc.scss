@@ -1,168 +1,222 @@
+/*! Pushy - v1.3.0 - 2019-6-25
+* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
+/* Menu Appearance */
+.pushy {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  background:white;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  /* enables momentum scrolling in iOS overflow elements */
+}
+.pushy a {
+  display: block;
+  color: #757575;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-bottom: 1px solid #34e9a0;
+}
+.pushy a:hover {
+  color: #5c5c5c;
+}
+.pushy ul:first-child {
+  // margin-top: 10px;
+}
+.pushy.pushy-left {
+  left: 0;
+}
+.pushy.pushy-right {
+  right: 0;
+}
 
-nav#slide-menu {
-    position: fixed;
-    top: 0px;
-    right: -100px;
-    bottom: 0;
-    display: block;
-    float: left;
-    width: 100%;
-    max-width: 284px;
-    height: 100%;
-    -moz-transition: all 300ms;
-    -webkit-transition: all 300ms;
-    transition: all 300ms;
-  }
-  nav#slide-menu > ul {
-    display: block;
-    margin: 0px;
-    padding: 0;
-    list-style: none;
-    opacity: 0.5;
-    -moz-transition: all 300ms;
-    -webkit-transition: all 300ms;
-    transition: all 300ms;
-  }
-  nav#slide-menu > ul li {
-    color: #dfe5eb;
+.pushy-content {
+  visibility: hidden;
+}
 
-    cursor: pointer;
+/* Menu Movement */
+.pushy-left {
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0);
+}
 
-    a {
-      padding: 10px 20px;
-      color: #5a5a5a;
-      width: 100%;
-      border-bottom: 1px solid #17cd8f;
-      display: flex;
+.pushy-open-left #container,
+.pushy-open-left .push {
+  -webkit-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0);
+}
 
-      &:hover {
-        text-decoration: none;
-        background-color: #16ca8f;
-        color: white;
-      }
-    }
-  }
-  nav#slide-menu > ul li:hover {
-    color: #59e9df;
-  }
-  nav#slide-menu > ul li:before {
-    font-family: "ico";
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    color: #59e9df;
-    margin-right: 12px;
-    text-align: center;
-    font-variant: normal;
-    font-size: 0.75em;
-    text-transform: none;
-    line-height: 1em;
-  }
-  nav#slide-menu > ul li.sep {
-    margin-top: 7px;
-    padding-top: 14px;
-    border-top: 1px solid #6b7b8d;
-  }
+.pushy-right {
+  -webkit-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0);
+}
 
-  
-  body.menu-active nav#slide-menu {
-    right: 0px;
+.pushy-open-right #container,
+.pushy-open-right .push {
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0);
+}
+
+.pushy-open-left .pushy,
+.pushy-open-right .pushy {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.pushy-open-left .pushy-content,
+.pushy-open-right .pushy-content {
+  visibility: visible;
+}
+
+/* Menu Transitions */
+#container,
+.pushy,
+.push {
+  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+.pushy-content {
+  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+/* Site Overlay */
+.site-overlay {
+  display: none;
+}
+
+.pushy-open-left .site-overlay,
+.pushy-open-right .site-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: fade 500ms;
+  animation: fade 500ms;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
   }
-  
-  body.menu-active nav#slide-menu ul {
-    right: 0px;
+  100% {
     opacity: 1;
   }
-  
-  /*
-    Content
-  */
-  div#content {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    background: #fcfeff;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-transition: all 300ms;
-    -webkit-transition: all 300ms;
-    transition: all 300ms;
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
   }
-
-
-  .overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0px;
-    z-index: -100000;
-    background-color: rgba(0, 0, 0, 0); 
-    -moz-transition: all 300ms;
-    -webkit-transition: all 300ms;
-    transition: all 300ms;  
+  100% {
+    opacity: 1;
+  }
+}
+/* Submenu Appearance */
+.pushy-submenu {
+  /* Submenu Buttons */
+  /* Submenu Icon */
+}
+.pushy-submenu > ul {
+  padding-left: 15px;
+  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+.pushy-submenu > ul .pushy-link {
+  transition: opacity 0.2s ease-in-out;
+}
+.pushy-submenu button {
+  width: 100%;
+  color: #b3b3b1;
+  padding: 15px 30px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+}
+.pushy-submenu button:hover {
+  color: #FFF;
+}
+.pushy-submenu > a,
+.pushy-submenu > button {
+  position: relative;
+}
+.pushy-submenu > a::after,
+.pushy-submenu > button::after {
+  content: '';
+  display: block;
+  height: 11px;
+  width: 8px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  background: url("../img/arrow.svg") no-repeat;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: transform 0.2s;
 }
 
-  .menu-active .overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 284px;
-    z-index: 999999;
-    background-color: rgba(0, 0, 0, 0.5);    
+/* Submenu Movement */
+.pushy-submenu-closed > ul {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.pushy-submenu-closed .pushy-link {
+  opacity: 0;
+}
+
+.pushy-submenu-open {
+  /* Submenu Icon */
+}
+.pushy-submenu-open > ul {
+  max-height: 1000px;
+  visibility: visible;
+}
+.pushy-submenu-open .pushy-link {
+  opacity: 1;
+}
+.pushy-submenu-open > a::after,
+.pushy-submenu-open > button::after {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 
 
 
-  div#content div.menu-trigger {
-    display: none;
-    
-    cursor: pointer;
-    img {
-        width: 36px;
-        height: 36px;
-    }
- 
- 
-  }
-  div#content div.menu-trigger:before {
-
-  }
- 
-  div#content div.menu-trigger:hover:before {
-    color: #fcfeff;
-  }
-  
-  body.menu-active div#content {
-    right: 284px;
-    border-radius: 7px 0 0 7px;
-  }
-  
-  body.menu-active div#content .menu-trigger {
-    right: 294px;
-  }
+.menu-btn {
+  float: right;
+  img {width: 30px;}
+}
+/*# sourceMappingURL=pushy.css.map */
 
 
-  .mobile-logo {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    /* height: 100%; */
+.pushy-content {
+
+  ul {
+    list-style: none;
+    padding: 0px;
+  }
+
+}
+
+.mobile-logo {
+  text-align: center;
+
+
+  img {
+    width: 90px;
     margin-top: 30px;
-
-   img {
-    width: 100px;
-    }
+    margin-bottom: 30px;
   }
+}

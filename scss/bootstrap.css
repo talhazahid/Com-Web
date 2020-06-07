@@ -6783,9 +6783,6 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
-body {
-  overflow-x: hidden; }
-
 header .logo {
   background-color: white;
   padding: 20px;
@@ -7008,6 +7005,18 @@ header .logo {
   left: -60px;
   top: 0px; }
 
+.feature-circle-bg {
+  content: url("../images/feature-circle.svg");
+  /* with class ModalCarrot ??*/
+  position: absolute;
+  /*or absolute*/
+  display: block;
+  -webkit-animation: rotating 170s linear infinite;
+  -moz-animation: rotating 170s linear infinite;
+  -ms-animation: rotating 170s linear infinite;
+  -o-animation: rotating 170s linear infinite;
+  animation: rotating 170s linear infinite; }
+
 .pink-contact-image {
   position: relative;
   display: flex;
@@ -7019,17 +7028,6 @@ header .logo {
   width: 100%; }
   .pink-contact-image img {
     max-width: 564px; }
-  .pink-contact-image::before {
-    content: url("../images/feature-circle.svg");
-    /* with class ModalCarrot ??*/
-    position: absolute;
-    /*or absolute*/
-    z-index: -1;
-    -webkit-animation: rotating 170s linear infinite;
-    -moz-animation: rotating 170s linear infinite;
-    -ms-animation: rotating 170s linear infinite;
-    -o-animation: rotating 170s linear infinite;
-    animation: rotating 170s linear infinite; }
 
 .feat-img-box {
   display: flex;
@@ -7441,193 +7439,143 @@ body {
   font-size: 18px;
   color: #B6B5C7; }
 
-/*! Pushy - v1.3.0 - 2019-6-25
-* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
-* https://github.com/christophery/pushy/
-* by Christopher Yee */
-/* Menu Appearance */
-.pushy {
+nav#slide-menu {
   position: fixed;
-  width: 200px;
-  height: 100%;
-  top: 0;
-  z-index: 9999;
-  background: white;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  /* enables momentum scrolling in iOS overflow elements */ }
-
-.pushy a {
+  top: 0px;
+  right: -100px;
+  bottom: 0;
   display: block;
-  color: #757575;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-bottom: 1px solid #34e9a0; }
+  float: left;
+  width: 100%;
+  max-width: 284px;
+  height: 100%;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
 
-.pushy a:hover {
-  color: #5c5c5c; }
+nav#slide-menu > ul {
+  display: block;
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+  opacity: 0.5;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
 
-.pushy.pushy-left {
-  left: 0; }
+nav#slide-menu > ul li {
+  color: #dfe5eb;
+  cursor: pointer; }
+  nav#slide-menu > ul li a {
+    padding: 10px 20px;
+    color: #5a5a5a;
+    width: 100%;
+    border-bottom: 1px solid #17cd8f;
+    display: flex; }
+    nav#slide-menu > ul li a:hover {
+      text-decoration: none;
+      background-color: #16ca8f;
+      color: white; }
 
-.pushy.pushy-right {
-  right: 0; }
+nav#slide-menu > ul li:hover {
+  color: #59e9df; }
 
-.pushy-content {
-  visibility: hidden; }
+nav#slide-menu > ul li:before {
+  font-family: "ico";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  color: #59e9df;
+  margin-right: 12px;
+  text-align: center;
+  font-variant: normal;
+  font-size: 0.75em;
+  text-transform: none;
+  line-height: 1em; }
 
-/* Menu Movement */
-.pushy-left {
-  -webkit-transform: translate3d(-200px, 0, 0);
-  -ms-transform: translate3d(-200px, 0, 0);
-  transform: translate3d(-200px, 0, 0); }
+nav#slide-menu > ul li.sep {
+  margin-top: 7px;
+  padding-top: 14px;
+  border-top: 1px solid #6b7b8d; }
 
-.pushy-open-left #container,
-.pushy-open-left .push {
-  -webkit-transform: translate3d(200px, 0, 0);
-  -ms-transform: translate3d(200px, 0, 0);
-  transform: translate3d(200px, 0, 0); }
+body.menu-active nav#slide-menu {
+  right: 0px; }
 
-.pushy-right {
-  -webkit-transform: translate3d(200px, 0, 0);
-  -ms-transform: translate3d(200px, 0, 0);
-  transform: translate3d(200px, 0, 0); }
+body.menu-active nav#slide-menu ul {
+  right: 0px;
+  opacity: 1; }
 
-.pushy-open-right #container,
-.pushy-open-right .push {
-  -webkit-transform: translate3d(-200px, 0, 0);
-  -ms-transform: translate3d(-200px, 0, 0);
-  transform: translate3d(-200px, 0, 0); }
+/*
+  Content
+*/
+div#content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #fcfeff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
 
-.pushy-open-left .pushy,
-.pushy-open-right .pushy {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.pushy-open-left .pushy-content,
-.pushy-open-right .pushy-content {
-  visibility: visible; }
-
-/* Menu Transitions */
-#container,
-.pushy,
-.push {
-  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
-
-.pushy-content {
-  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
-
-/* Site Overlay */
-.site-overlay {
-  display: none; }
-
-.pushy-open-left .site-overlay,
-.pushy-open-right .site-overlay {
+.overlay {
   display: block;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  z-index: 9998;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-animation: fade 500ms;
-  animation: fade 500ms; }
+  left: 0px;
+  z-index: -100000;
+  background-color: rgba(0, 0, 0, 0);
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
 
-@keyframes fade {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-/* Submenu Appearance */
-.pushy-submenu {
-  /* Submenu Buttons */
-  /* Submenu Icon */ }
-
-.pushy-submenu > ul {
-  padding-left: 15px;
-  transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out; }
-
-.pushy-submenu > ul .pushy-link {
-  transition: opacity 0.2s ease-in-out; }
-
-.pushy-submenu button {
-  width: 100%;
-  color: #b3b3b1;
-  padding: 15px 30px;
-  text-align: left;
-  background: transparent;
-  border: 0; }
-
-.pushy-submenu button:hover {
-  color: #FFF; }
-
-.pushy-submenu > a,
-.pushy-submenu > button {
-  position: relative; }
-
-.pushy-submenu > a::after,
-.pushy-submenu > button::after {
-  content: '';
+.menu-active .overlay {
   display: block;
-  height: 11px;
-  width: 8px;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  background: url("../img/arrow.svg") no-repeat;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  transition: transform 0.2s; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 284px;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.5); }
 
-/* Submenu Movement */
-.pushy-submenu-closed > ul {
-  max-height: 0;
-  overflow: hidden;
-  visibility: hidden; }
+div#content div.menu-trigger {
+  display: none;
+  cursor: pointer; }
+  div#content div.menu-trigger img {
+    width: 36px;
+    height: 36px; }
 
-.pushy-submenu-closed .pushy-link {
-  opacity: 0; }
+div#content div.menu-trigger:hover:before {
+  color: #fcfeff; }
 
-.pushy-submenu-open {
-  /* Submenu Icon */ }
+body.menu-active div#content {
+  right: 284px;
+  border-radius: 7px 0 0 7px; }
 
-.pushy-submenu-open > ul {
-  max-height: 1000px;
-  visibility: visible; }
-
-.pushy-submenu-open .pushy-link {
-  opacity: 1; }
-
-.pushy-submenu-open > a::after,
-.pushy-submenu-open > button::after {
-  -webkit-transform: translateY(-50%) rotate(90deg);
-  -ms-transform: translateY(-50%) rotate(90deg);
-  transform: translateY(-50%) rotate(90deg); }
-
-.menu-btn {
-  float: right; }
-  .menu-btn img {
-    width: 30px; }
-
-/*# sourceMappingURL=pushy.css.map */
-.pushy-content ul {
-  list-style: none;
-  padding: 0px; }
+body.menu-active div#content .menu-trigger {
+  right: 294px; }
 
 .mobile-logo {
-  text-align: center; }
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* height: 100%; */
+  margin-top: 30px; }
   .mobile-logo img {
-    width: 90px;
-    margin-top: 30px;
-    margin-bottom: 30px; }
+    width: 100px; }
 
 @-webkit-keyframes rotating {
   from {
@@ -7665,58 +7613,9 @@ body {
   to {
     transform: rotate(360deg);
     transform-origin: 0% 0%; } }
-@keyframes wiggle {
-  2% {
-    transform: translateX(3px) rotate(2deg); }
-  4% {
-    transform: translateX(-3px) rotate(-2deg); }
-  6% {
-    transform: translateX(3px) rotate(2deg); }
-  8% {
-    transform: translateX(-3px) rotate(-2deg); }
-  10% {
-    transform: translateX(2px) rotate(1deg); }
-  12% {
-    transform: translateX(-2px) rotate(-1deg); }
-  14% {
-    transform: translateX(2px) rotate(1deg); }
-  16% {
-    transform: translateX(-2px) rotate(-1deg); }
-  18% {
-    transform: translateX(1px) rotate(0deg); }
-  20% {
-    transform: translateX(-1px) rotate(0deg); } }
-.thumb-animation {
-  display: inline-block;
-  backface-visibility: hidden;
-  transform: translateZ(0px);
-  animation-duration: 2s;
-  animation-name: wiggle;
-  animation-play-state: running;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; }
-
 @media only screen and (max-width: 767px) {
-  @-webkit-keyframes rotating {
-    from {
-      -webkit-transform: rotate(0deg) scale(0.76);
-      -o-transform: rotate(0deg) scale(0.76);
-      transform: rotate(0deg) scale(0.76); }
-    to {
-      -webkit-transform: rotate(360deg) scale(0.76);
-      -o-transform: rotate(360deg) scale(0.76);
-      transform: rotate(360deg) scale(0.76); } }
-  @keyframes rotating {
-    from {
-      -webkit-transform: rotate(0deg) scale(0.76);
-      -o-transform: rotate(0deg) scale(0.76);
-      transform: rotate(0deg) scale(0.76); }
-    to {
-      -webkit-transform: rotate(360deg) scale(0.76);
-      -o-transform: rotate(360deg) scale(0.76);
-      transform: rotate(360deg) scale(0.76); } }
   .pink-contact-image img {
-    max-width: 420px; }
+    max-width: 100%; }
 
   .footer-logo-box {
     display: flex;
@@ -7873,7 +7772,7 @@ body {
     margin-top: 35px; }
 
   .feature-circle-bg {
-    display: none; }
+    width: 108%; }
 
   .feature-long-path {
     display: none; }
@@ -8813,12 +8712,5 @@ body {
 
   .pink-contact-image {
     width: auto; } }
-@media only screen and (min-width: 1200px) {
-  .menu-btn {
-    display: none; } }
-@media only screen and (max-width: 1023px) {
-  .animatedParent {
-    display: flex;
-    justify-content: center; } }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=bootstrap.css.map */

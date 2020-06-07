@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <title>Comera</title>
     <link rel="stylesheet" href="css/main.css">
 
@@ -12,39 +12,70 @@
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
+    <link rel="stylesheet" href="css/animations.css
+    " />
+
+
+
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js'></script>
-
-
+   
+   
 </head>
 <body>
     
 
-  <!-- Navigation -->
-<nav id="slide-menu">
+  <nav class="pushy pushy-right" >
+    <div class="pushy-content">
 
-  <div class="mobile-logo">
-    <img src="images/comera-logo.svg">
-  </div>
-
-
-  <ul>
-    <li><a href="#" class="active">Home</a></li>
-    <li><a href="#">Features</a></li>
-    <li><a href="#">Download</a></li>
-    <li><a href="#">Security</a></li>
-    <li><a href="#">FAQs</a></li>
-</ul>
+      <div class="mobile-logo">
+        <img src="images/comera-logo.svg">
+    </div>
 
 
+        <ul>
+            <!-- <li class="pushy-submenu">
+                <button id="first-link">Submenu 1</button>
+                <ul>
+                    <li class="pushy-submenu">
+                        <button>Sub-Submenu 1</button>
+                        <ul>
+                            <li class="pushy-link"><a href="#">Item 1</a></li>
+                            <li class="pushy-link"><a href="#">Item 2</a></li>
+                        </ul>
+                    </li>
 
+
+                    <li class="pushy-submenu">
+                        <button>Sub-Submenu 2</button>
+                        <ul>
+                            <li class="pushy-link"><a href="#">Item 1</a></li>
+                            <li class="pushy-link"><a href="#">Item 2</a></li>
+                        </ul>
+                    </li>
+                 
+                </ul>
+            </li> -->
+
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+    </div>
 </nav>
 
-<div class="overlay">
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
 
-</div>
-<div id="content">
+
+<div id="container">
 
 
   <div class="container-fluid">
@@ -69,13 +100,15 @@
                 </div>
                 <div class="col-xl-6 col-9">
 
-                  
-            <div class="menu-trigger">
-
-
+               <!-- Menu Button -->
+            <button class="menu-btn menu-trigger">
+              
+            
               <img src="images/mobile-menu.svg">
-
-            </div>
+            
+            
+            </button>     
+           
 
 
                     <div class="header-desktop-menu">
@@ -113,7 +146,7 @@
                         <div class="hero-section-small-text">
                             with Comera, <span class="hero-underline">Its Free</span>
 
-                            <span class="free-thumb">
+                            <span class="free-thumb thumb-animation ">
                                 <img src="images/free-thumb.svg">
                             </span>
                         </div>
@@ -232,9 +265,9 @@
 
           <div class="row feature-two-columns">
 
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6 animatedParent"  data-appear-top-offset='-300'>
 
-              <div class="feature-section-box">
+              <div class="feature-section-box animated fadeInLeft">
 
                 <div class="feat-img-box">
                   <div class="feature-peach-circle">
@@ -265,8 +298,9 @@
              
 
              
-              <div class="feature-text-box">
-                <div class="feature-text-box-alignment">
+     <div class="feature-text-box 
+     animatedParent" data-appear-top-offset='-300'>
+                <div class="feature-text-box-alignment animated fadeInUp">
 
                 <div class="feature-text-box-icon">
                   <img src="images/contact_sync.png">
@@ -304,13 +338,19 @@
           
           <div class="row feature-two-columns  feature-two-columns-margin feature-column-order">
 
+
+            <div class="full-width-object">
+              <img src="images/floating_element8.png">
+            </div>
+
             <div class="col-xl-6 col-lg-6">
 
               <div class="feature-section-box">
 
 
-                <div class="feature-text-box">
-                  <div class="feature-text-box-alignment">
+                <div class="feature-text-box 
+                animatedParent" data-appear-top-offset='-300'>
+                           <div class="feature-text-box-alignment animated fadeInUp">
 
                   <div class="feature-text-box-icon">
                     <img src="images/video_audio.png">
@@ -338,11 +378,11 @@
             </div>
 
 
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6 animatedParent" data-appear-top-offset='-300'>
 
              
 
-              <div class="feat-img-box">
+              <div class="feat-img-box animated fadeInRight ">
                 <div class="feature-audio-video-call">
                   <img src="images/img_video_floating.png">
                 </div>
@@ -369,12 +409,11 @@
           <div class="row feature-two-columns  feature-two-columns-margin feature-column-order">
 
 
-            
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6 animatedParent" data-appear-top-offset='-300'>
 
              
 
-              <div class="feat-img-box">
+              <div class="feat-img-box animated fadeInLeft ">  
                 <div class="feature-text-audio-msg">
                   <img src="images/img_text_audio_floating.png">
                 </div>
@@ -399,8 +438,9 @@
               <div class="feature-section-box">
 
 
-                <div class="feature-text-box">
-                  <div class="feature-text-box-alignment">
+                <div class="feature-text-box 
+                animatedParent" data-appear-top-offset='-300'>
+                           <div class="feature-text-box-alignment animated fadeInUp">
 
                   <div class="feature-text-box-icon">
                     <img src="images/text_audio.png">
@@ -441,8 +481,9 @@
               <div class="feature-section-box">
 
 
-                <div class="feature-text-box">
-                  <div class="feature-text-box-alignment">
+                <div class="feature-text-box 
+                animatedParent" data-appear-top-offset='-300'>
+                           <div class="feature-text-box-alignment animated fadeInUp">
 
                   <div class="feature-text-box-icon">
                     <img src="images/video_audio.png">
@@ -470,11 +511,11 @@
             </div>
 
 
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6 animatedParent" data-appear-top-offset='-300'>
 
              
 
-              <div class="feat-img-box">
+              <div class="feat-img-box animated fadeInRight "> 
                 <div class="feature-encryption">
                   <img src="images/img_encryption_floating.png ">
                 </div>
@@ -503,11 +544,11 @@
 
 
             
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6 animatedParent" data-appear-top-offset='-300'>
 
              
 
-              <div class="feat-img-box">
+              <div class="feat-img-box animated fadeInLeft "> 
                 <!-- <div class="feature-text-audio-msg">
                   <img src="images/img_text_audio_floating.png">
                 </div> -->
@@ -532,8 +573,9 @@
               <div class="feature-section-box">
 
 
-                <div class="feature-text-box">
-                  <div class="feature-text-box-alignment">
+                <div class="feature-text-box 
+                animatedParent" data-appear-top-offset='-300'>
+                           <div class="feature-text-box-alignment animated fadeInUp">
 
                   <div class="feature-text-box-icon">
                     <img src="images/groupchat.png">
@@ -572,8 +614,9 @@
               <div class="feature-section-box">
 
 
-                <div class="feature-text-box">
-                  <div class="feature-text-box-alignment">
+                <div class="feature-text-box 
+                animatedParent" data-appear-top-offset='-300'>
+                           <div class="feature-text-box-alignment animated fadeInUp">
 
                   <div class="feature-text-box-icon">
                     <img src="images/media_file.png">
@@ -601,11 +644,12 @@
             </div>
 
 
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6 animatedParent" data-appear-top-offset='-300'>
 
              
 
-              <div class="feat-img-box">
+              <div class="feat-img-box animated fadeInRight ">  
+
                 <div class="feature-media-files">
                   <img src="images/img_media_file_floating.png ">
                 </div>
@@ -633,11 +677,11 @@
 
 
             
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6 animatedParent" data-appear-top-offset='-300'>
 
              
 
-              <div class="feat-img-box">
+              <div class="feat-img-box animated fadeInLeft "> 
                 <div class="feature-notification">
                   <img src="images/img_notifications_floating.png">
                 </div>
@@ -662,8 +706,9 @@
               <div class="feature-section-box">
 
 
-                <div class="feature-text-box">
-                  <div class="feature-text-box-alignment">
+                <div class="feature-text-box 
+                animatedParent" data-appear-top-offset='-300'>
+                           <div class="feature-text-box-alignment animated fadeInUp">
 
                   <div class="feature-text-box-icon">
                     <img src="images/notification.png">
@@ -705,8 +750,9 @@
               <div class="feature-section-box">
 
 
-                <div class="feature-text-box">
-                  <div class="feature-text-box-alignment">
+                <div class="feature-text-box 
+                animatedParent" data-appear-top-offset='-300'>
+                           <div class="feature-text-box-alignment animated fadeInUp">
 
                   <div class="feature-text-box-icon">
                     <img src="images/location.png">
@@ -733,12 +779,11 @@
 
             </div>
 
-
-            <div class="col-xl-6 col-lg-6">
+            <div class="col-xl-6 col-lg-6 animatedParent" data-appear-top-offset='-300'>
 
              
 
-              <div class="feat-img-box">
+              <div class="feat-img-box animated fadeInRight ">  
                 <div class="feature-location">
                   <img src="images/img_location_floating.png ">
                 </div>
@@ -1272,9 +1317,12 @@
    
 
 
+
+ <script src="scripts/css3-animate-it.js"></script>
    
 
     <script src='scripts/custom.js'></script>
+
 
 
 

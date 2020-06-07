@@ -1,14 +1,45 @@
 @media only screen and (max-width: 600px) {
 
 
+ 
 
 }
 
 
 @media only screen and (max-width: 767px) {
 
+
+  @-webkit-keyframes rotating  {
+    from {
+      -webkit-transform: rotate(0deg)  scale(0.76);
+      -o-transform: rotate(0deg)  scale(0.76);
+      transform: rotate(0deg)  scale(0.76);
+    }
+    to {
+      -webkit-transform: rotate(360deg)  scale(0.76);
+      -o-transform: rotate(360deg)  scale(0.76);
+      transform: rotate(360deg)  scale(0.76);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg)  scale(0.76);
+      -o-transform: rotate(0deg)  scale(0.76);
+      transform: rotate(0deg)  scale(0.76);
+    }
+    to {
+      -webkit-transform: rotate(360deg)  scale(0.76);
+      -o-transform: rotate(360deg)  scale(0.76);
+      transform: rotate(360deg)  scale(0.76);
+    }
+  
+  }
+
+
+  
+
   .pink-contact-image img {
-    max-width: 100%;
+    max-width: 420px;
 }
 
   .footer-logo-box {
@@ -230,8 +261,13 @@
 }
 
 .feature-circle-bg {
-    width: 108%;
+    // width: 108%;
+    display: none;
+  
 }
+
+
+
 
 .feature-long-path {
     display: none;
@@ -590,6 +626,7 @@ display: none;
 
 
 @media only screen and (min-width: 1024px) {
+
 
 .hide-on-desktop {
   display: none;
@@ -1680,3 +1717,29 @@ display: none;
 
 
 }
+
+
+
+
+@media only screen and (min-width: 1200px) {
+
+  .menu-btn {
+    display: none;
+  }
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 1023px) {
+  .animatedParent {
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  }
+

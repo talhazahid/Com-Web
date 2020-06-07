@@ -23,6 +23,12 @@ header {
   position: absolute;
   width: 100%;
   left: -320px;
+
+  // left:-webkit-calc(100% - 350px);
+  // left:-moz-calc(100% - 350px);
+  // left:calc(100% - 350px);
+
+
   z-index: -1;
 }
 
@@ -275,15 +281,16 @@ header {
 }
 
 .feature-circle-bg {
-  content: url("../images/feature-circle.svg"); /* with class ModalCarrot ??*/
-  position: absolute; /*or absolute*/
-  display: block;
+  // content: url("../images/feature-circle.svg"); /* with class ModalCarrot ??*/
+  // position: absolute; /*or absolute*/
+  // display: inline-block;
+  // margin: auto;
 
-  -webkit-animation: rotating 170s linear infinite;
-  -moz-animation: rotating 170s linear infinite;
-  -ms-animation: rotating 170s linear infinite;
-  -o-animation: rotating 170s linear infinite;
-  animation: rotating 170s linear infinite;
+  // -webkit-animation: rotating 170s linear infinite;
+  // -moz-animation: rotating 170s linear infinite;
+  // -ms-animation: rotating 170s linear infinite;
+  // -o-animation: rotating 170s linear infinite;
+  // animation: rotating 170s linear infinite;
 
 }
 
@@ -301,10 +308,25 @@ header {
   img {
     max-width: 564px;
   }
+
+&::before {
+  content: url("../images/feature-circle.svg"); /* with class ModalCarrot ??*/
+  position: absolute; /*or absolute*/
+  z-index: -1;
+
+  -webkit-animation: rotating 170s linear infinite;
+  -moz-animation: rotating 170s linear infinite;
+  -ms-animation: rotating 170s linear infinite;
+  -o-animation: rotating 170s linear infinite;
+  animation: rotating 170s linear infinite;
+}
+
+
 }
 
 
 .feat-img-box {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -647,3 +669,12 @@ footer {
 
 
 
+
+
+
+.full-width-object {
+  position: absolute;
+  margin-left: calc(-100vw / 2 + 500px / 2);
+  margin-right: calc(-100vw / 2 + 500px / 2);
+  display: none;
+}
