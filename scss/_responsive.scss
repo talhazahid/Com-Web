@@ -197,9 +197,9 @@
       .hero-circle-img {
         position: relative;
         z-index: 1;
-        text-align: center;
-        justify-content: center;
-        display: flex;
+        display: table;
+        margin: 0 auto;
+      
 
         img {
           max-width: 300px;
@@ -627,6 +627,15 @@ display: none;
 
 @media only screen and (min-width: 1024px) {
 
+
+  .feature-text-box-icon {
+
+    img {
+      margin-left: -25px;
+    }
+
+
+  }
 
 .hide-on-desktop {
   display: none;

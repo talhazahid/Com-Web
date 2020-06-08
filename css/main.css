@@ -6869,7 +6869,8 @@ header {
     display: flex;
     flex-direction: column;
     font-size: 56px;
-    font-size: 600; }
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif; }
 
 .hero-right-section {
   display: flex; }
@@ -7176,6 +7177,7 @@ header {
   position: relative;
   padding: 180px 0px;
   position: relative;
+  overflow: hidden;
   display: flex;
   margin-bottom: 200px; }
   .join-today::after {
@@ -7939,9 +7941,8 @@ body {
       .hero-section .hero-circle .hero-circle-img {
         position: relative;
         z-index: 1;
-        text-align: center;
-        justify-content: center;
-        display: flex; }
+        display: table;
+        margin: 0 auto; }
         .hero-section .hero-circle .hero-circle-img img {
           max-width: 300px;
           float: right;
@@ -8223,6 +8224,9 @@ body {
   .hide-on-pad {
     display: none; } }
 @media only screen and (min-width: 1024px) {
+  .feature-text-box-icon img {
+    margin-left: -25px; }
+
   .hide-on-desktop {
     display: none; } }
 @media only screen and (min-width: 768px) and (max-width: 991px) {

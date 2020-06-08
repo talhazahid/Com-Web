@@ -128,7 +128,8 @@ header {
     display: flex;
     flex-direction: column;
     font-size: 56px;
-    font-size: 600;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
   }
 }
 
@@ -542,6 +543,7 @@ header {
   position: relative;
   padding: 180px 0px;
   position: relative;
+  overflow: hidden;
   display: flex;
   margin-bottom: 200px;
 
