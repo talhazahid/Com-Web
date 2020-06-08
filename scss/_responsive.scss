@@ -490,15 +490,22 @@
 
 .join-today {
 
-    padding: 180px 0px 25px;
+    padding: 10px 0px 25px;
     margin-bottom: 30px;
 }
 
 
+.apps-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(139px, 1fr));
+  grid-gap: 20px;
+
+}
+
 
 .join-today-img-box {
     position: absolute;
-    top: -90%;
+    top: -20%;
     z-index: 3;
     right: 0px;
     width: 62%;
@@ -1751,6 +1758,12 @@ display: none;
   display: none;
 }
 
+header {
+  .container {
+    max-width: 98%;
+  }
+  
+}
 
 
 
@@ -1761,4 +1774,25 @@ display: none;
 
   
   }
+
+
+
+  @media only screen and (max-width: 1199px) {
+  
+
+    
+    header {
+      .container {
+        max-width: 98%;
+      }
+      
+    }
+    
+    
+    
+      
+      }
+
+      
+
 

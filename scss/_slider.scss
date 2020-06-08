@@ -47,9 +47,21 @@ display: flex;
 }
 #big.owl-theme .owl-prev {
   left: 10px;
+  background: none;
+  background-image: url(../images/left-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
 }
 #big.owl-theme .owl-next {
   right: 10px;
+  background: none;
+  background-image: url(../images/right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
 }
 #thumbs.owl-theme .owl-next,
 #thumbs.owl-theme .owl-prev {
@@ -345,3 +357,13 @@ color: #2D2D2D;
    
 }
 
+
+
+
+.owl-nav {
+    background: none;
+    .fa {
+        display: none;
+    }
+
+}

@@ -30,6 +30,8 @@ input {
   }
 
 
+ 
+
   }
 
 
@@ -169,6 +171,12 @@ header {
   font-family: "Roboto Condensed", sans-serif;
   padding: 30px 60px;
   margin-left: 10px;
+
+  span {
+    margin-right: 7px;
+    position: relative;
+    top: -1px;
+  }
 
   &:hover,
   &:focus {
@@ -541,11 +549,10 @@ header {
 
 .join-today {
   position: relative;
-  padding: 180px 0px;
-  position: relative;
-  overflow: hidden;
+
   display: flex;
   margin-bottom: 200px;
+
 
 
   &::after {
@@ -567,7 +574,7 @@ header {
 
 
 .join-today-box {
-  margin-bottom: 50px;
+  padding: 180px 0px;
   width: 350px;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -594,11 +601,17 @@ header {
 
 .join-today-img-box {
   position: absolute;
-  top: -80%;
+  top: -70px;
   z-index: 3;
   right: 0px;
 
 
+}
+
+
+.join-fix-image {
+
+  background-image: url(../images/join-merged.png);
 }
 
 
@@ -828,3 +841,21 @@ right: 0;
 
 
 
+
+
+.watch-btn-slide {
+
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  .watch-text {
+    margin-left: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    color: #1C165A;
+  }
+
+
+
+}

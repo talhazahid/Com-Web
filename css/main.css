@@ -6901,6 +6901,10 @@ header {
   font-family: "Roboto Condensed", sans-serif;
   padding: 30px 60px;
   margin-left: 10px; }
+  .watch-video span {
+    margin-right: 7px;
+    position: relative;
+    top: -1px; }
   .watch-video:hover, .watch-video:focus {
     color: #140f49;
     text-decoration: none; }
@@ -7175,9 +7179,6 @@ header {
 
 .join-today {
   position: relative;
-  padding: 180px 0px;
-  position: relative;
-  overflow: hidden;
   display: flex;
   margin-bottom: 200px; }
   .join-today::after {
@@ -7192,7 +7193,7 @@ header {
     border-bottom-right-radius: 40px; }
 
 .join-today-box {
-  margin-bottom: 50px;
+  padding: 180px 0px;
   width: 350px;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -7214,9 +7215,12 @@ header {
 
 .join-today-img-box {
   position: absolute;
-  top: -80%;
+  top: -70px;
   z-index: 3;
   right: 0px; }
+
+.join-fix-image {
+  background-image: url(../images/join-merged.png); }
 
 .relative {
   position: relative; }
@@ -7358,6 +7362,16 @@ footer {
   position: absolute;
   right: 0; }
 
+.watch-btn-slide {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; }
+  .watch-btn-slide .watch-text {
+    margin-left: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    color: #1C165A; }
+
 .font-condensed {
   font-family: 'Roboto Condensed', sans-serif; }
 
@@ -7411,10 +7425,22 @@ body {
   border-radius: 100%; }
 
 #big.owl-theme .owl-prev {
-  left: 10px; }
+  left: 10px;
+  background: none;
+  background-image: url(../images/left-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px; }
 
 #big.owl-theme .owl-next {
-  right: 10px; }
+  right: 10px;
+  background: none;
+  background-image: url(../images/right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px; }
 
 #thumbs.owl-theme .owl-next,
 #thumbs.owl-theme .owl-prev {
@@ -7546,6 +7572,11 @@ body {
 .slider-text-box-small-text {
   font-size: 18px;
   color: #B6B5C7; }
+
+.owl-nav {
+  background: none; }
+  .owl-nav .fa {
+    display: none; }
 
 /*! Pushy - v1.3.0 - 2019-6-25
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
@@ -8141,12 +8172,17 @@ body {
     width: 100%; }
 
   .join-today {
-    padding: 180px 0px 25px;
+    padding: 10px 0px 25px;
     margin-bottom: 30px; }
+
+  .apps-btns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(139px, 1fr));
+    grid-gap: 20px; }
 
   .join-today-img-box {
     position: absolute;
-    top: -90%;
+    top: -20%;
     z-index: 3;
     right: 0px;
     width: 62%; }
@@ -8935,8 +8971,14 @@ body {
   .full-width-object {
     display: none; }
 
+  header .container {
+    max-width: 98%; }
+
   .animatedParent {
     display: flex;
     justify-content: center; } }
+@media only screen and (max-width: 1199px) {
+  header .container {
+    max-width: 98%; } }
 
 /*# sourceMappingURL=main.css.map */
