@@ -1,8 +1,51 @@
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  }
+
+  button {
+     
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      
+  }
+
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: white;
+    left: 0px;
+    -webkit-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.37);
+    -moz-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.37);
+    box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.37);
+
+    .logo img {
+      width: 60px;
+  }
+
+
+  }
+
+
+
+
 body {
   overflow-x: hidden;
 }
 
 header {
+
+  transition: all 0.25s ease-in-out;
+
+
+
+
   .logo {
     background-color: white;
     padding: 20px;
@@ -12,6 +55,7 @@ header {
 
     img {
       width: 125px;
+      transition: all 0.25s ease-in-out;
     }
   }
 }
@@ -266,6 +310,7 @@ header {
 .feature-two-columns {
   position: relative;
   top: -50px;
+  z-index: 2;
 }
 
 .feature-section-box {
@@ -379,6 +424,40 @@ header {
   width: 100%;
   margin-top: -150px;
   z-index: -1;
+
+
+  &::after {
+    content: url('');
+    position: fixed;
+    display: block;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);
+    /* bottom: 0px; */
+    height: 80px;
+    width: 100%;
+    bottom: 150px;
+  }
+
+
+  &::before {
+    content: url('');
+    position: fixed;
+    display: block;
+    background:white;
+
+    /* bottom: 0px; */
+    height: 150px;
+    width: 100%;
+    bottom: 0px;
+
+
+  }
+
+
+
+
+
+
 }
 
 
@@ -673,8 +752,77 @@ footer {
 
 
 .full-width-object {
-  position: absolute;
-  margin-left: calc(-100vw / 2 + 500px / 2);
-  margin-right: calc(-100vw / 2 + 500px / 2);
-  display: none;
+  width: 100vw;
+  position: relative;
+  left: 50%;  
+  margin-left: -50vw;
+  
 }
+
+
+
+.full-width-object-right {
+  width: 100vh;
+  position: absolute;
+  right: 50%;
+  margin-right: -50vw;
+
+  
+}
+
+.full-width-object-right-shape {
+  height: 254px;
+  width: 113px;
+  display: flex;
+  z-index: 222;
+  position: absolute;
+  right: -1vh;
+  background-repeat: no-repeat;
+}
+
+
+.full-width-object-left {
+  width: 100vh;
+  position: absolute;
+  left: 50%;
+  margin-left: -50vw;
+
+  
+}
+
+.full-width-object-left-shape {
+  height: 254px;
+  width: 113px;
+  display: flex;
+
+  position: absolute;
+  left: 0vh;
+  top: 300px;
+  background-repeat: no-repeat;
+}
+
+.feature-full-shape {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: flex;
+}
+
+
+.left-circle-shape {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+}
+
+
+.full-width-right-circle {
+position: absolute;
+right: 0;
+}
+
+
+
+
+

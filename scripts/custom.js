@@ -357,3 +357,21 @@ $(document).ready(function() {
       bigimage.data("owl.carousel").to(number, 300, true);
     });
   });
+
+
+
+
+
+
+
+
+
+  // Sticky Header
+
+  $(window).scroll(function(){
+	var sticky = $('header'),
+		scroll = $(window).scrollTop();
+  
+	if (scroll >= 100) sticky.addClass('sticky');
+	else sticky.removeClass('sticky');
+  });

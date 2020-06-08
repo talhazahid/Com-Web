@@ -92,6 +92,21 @@ align-items: center;
            -moz-border-radius: 100%;
            -webkit-border-radius: 100%;
            background-color:#147AFF;
+           position: relative;
+
+
+           &::before {
+            content: url("");
+            position: absolute;
+            width: 100vh;
+            height: 3px;
+            background: #17d38c;
+            z-index: 1;
+            left: -99vh;
+            display: inline-block;
+            top: 5px;
+            z-index: -1;
+           }
          
        }
 

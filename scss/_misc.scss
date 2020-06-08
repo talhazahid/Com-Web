@@ -193,9 +193,14 @@
 }
 
 
+.pushy a.active {
+  background-color: #ebebeb;
+}
 
 .menu-btn {
   float: right;
+  background: none;
+  border: 0px;
   img {width: 30px;}
 }
 /*# sourceMappingURL=pushy.css.map */

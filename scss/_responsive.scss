@@ -202,7 +202,7 @@
         display: flex;
 
         img {
-          width: 75%;
+          max-width: 300px;
           float: right;
           position: relative;
 
@@ -1735,6 +1735,16 @@ display: none;
 
 
 @media only screen and (max-width: 1023px) {
+  
+.full-width-object-right,
+.full-width-object-left,
+.full-width-object  {
+  display: none;
+}
+
+
+
+
   .animatedParent {
     display: flex;
     justify-content: center;

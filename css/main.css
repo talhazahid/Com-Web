@@ -6783,17 +6783,43 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background: white;
+  left: 0px;
+  -webkit-box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.37);
+  box-shadow: 2px 2px 4px -1px rgba(0, 0, 0, 0.37); }
+  .sticky .logo img {
+    width: 60px; }
+
 body {
   overflow-x: hidden; }
 
-header .logo {
-  background-color: white;
-  padding: 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  display: inline-block; }
-  header .logo img {
-    width: 125px; }
+header {
+  transition: all 0.25s ease-in-out; }
+  header .logo {
+    background-color: white;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: inline-block; }
+    header .logo img {
+      width: 125px;
+      transition: all 0.25s ease-in-out; }
 
 .header-logo-shade {
   background-image: url(../images/header-logo-shade.svg);
@@ -6996,7 +7022,8 @@ header .logo {
 
 .feature-two-columns {
   position: relative;
-  top: -50px; }
+  top: -50px;
+  z-index: 2; }
 
 .feature-section-box {
   position: relative;
@@ -7068,6 +7095,25 @@ header .logo {
   width: 100%;
   margin-top: -150px;
   z-index: -1; }
+  .feature-long-path::after {
+    content: url("");
+    position: fixed;
+    display: block;
+    background: white;
+    background: linear-gradient(0deg, white 0%, rgba(255, 0, 0, 0) 100%);
+    /* bottom: 0px; */
+    height: 80px;
+    width: 100%;
+    bottom: 150px; }
+  .feature-long-path::before {
+    content: url("");
+    position: fixed;
+    display: block;
+    background: white;
+    /* bottom: 0px; */
+    height: 150px;
+    width: 100%;
+    bottom: 0px; }
 
 .feature-audio-video-call {
   position: absolute;
@@ -7259,10 +7305,56 @@ footer {
       margin-right: 20px; }
 
 .full-width-object {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw; }
+
+.full-width-object-right {
+  width: 100vh;
   position: absolute;
-  margin-left: calc(-100vw / 2 + 500px / 2);
-  margin-right: calc(-100vw / 2 + 500px / 2);
-  display: none; }
+  right: 50%;
+  margin-right: -50vw; }
+
+.full-width-object-right-shape {
+  height: 254px;
+  width: 113px;
+  display: flex;
+  z-index: 222;
+  position: absolute;
+  right: -1vh;
+  background-repeat: no-repeat; }
+
+.full-width-object-left {
+  width: 100vh;
+  position: absolute;
+  left: 50%;
+  margin-left: -50vw; }
+
+.full-width-object-left-shape {
+  height: 254px;
+  width: 113px;
+  display: flex;
+  position: absolute;
+  left: 0vh;
+  top: 300px;
+  background-repeat: no-repeat; }
+
+.feature-full-shape {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: flex; }
+
+.left-circle-shape {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex; }
+
+.full-width-right-circle {
+  position: absolute;
+  right: 0; }
 
 .font-condensed {
   font-family: 'Roboto Condensed', sans-serif; }
@@ -7354,7 +7446,19 @@ body {
   border-radius: 100%;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
-  background-color: #147AFF; }
+  background-color: #147AFF;
+  position: relative; }
+  .current .item .thumb-circle::before {
+    content: url("");
+    position: absolute;
+    width: 100vh;
+    height: 3px;
+    background: #17d38c;
+    z-index: 1;
+    left: -99vh;
+    display: inline-block;
+    top: 5px;
+    z-index: -1; }
 .current .item .how-works-heading {
   font-weight: 600;
   color: #2D2D2D; }
@@ -7612,8 +7716,13 @@ body {
   -ms-transform: translateY(-50%) rotate(90deg);
   transform: translateY(-50%) rotate(90deg); }
 
+.pushy a.active {
+  background-color: #ebebeb; }
+
 .menu-btn {
-  float: right; }
+  float: right;
+  background: none;
+  border: 0px; }
   .menu-btn img {
     width: 30px; }
 
@@ -7834,7 +7943,7 @@ body {
         justify-content: center;
         display: flex; }
         .hero-section .hero-circle .hero-circle-img img {
-          width: 75%;
+          max-width: 300px;
           float: right;
           position: relative; }
     .hero-section .hero-left-section h1 {
@@ -8817,6 +8926,11 @@ body {
   .menu-btn {
     display: none; } }
 @media only screen and (max-width: 1023px) {
+  .full-width-object-right,
+  .full-width-object-left,
+  .full-width-object {
+    display: none; }
+
   .animatedParent {
     display: flex;
     justify-content: center; } }
