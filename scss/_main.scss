@@ -1,4 +1,10 @@
+html{
+  overflow-x: hidden;
+}
 
+body {
+  overflow-x: hidden;
+}
 input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -63,12 +69,12 @@ header {
 }
 
 .header-logo-shade {
-  background-image: url(../images/header-logo-shade.svg);
+  background-image: url(../images/header-shade.svg);
   height: 2000px;
   background-repeat: no-repeat;
   position: absolute;
   width: 100%;
-  left: -320px;
+  left: 0px;
 
   // left:-webkit-calc(100% - 350px);
   // left:-moz-calc(100% - 350px);
