@@ -8,6 +8,10 @@
 
 @media only screen and (max-width: 767px) {
 
+  .modal-dialog {
+    min-height: calc(100vh - 20px);
+  }
+
 
   @-webkit-keyframes rotating  {
     from {
@@ -434,7 +438,7 @@
     display: flex;
     padding: 20px;
     img {
-        width: 100% !important;
+        width: auto;
     }
 
 }
@@ -1045,7 +1049,7 @@ display: none;
     display: flex;
     padding: 20px;
     img {
-        width: 100% !important;
+        width: auto ;
     }
 
 }
@@ -1630,7 +1634,7 @@ display: none;
     display: flex;
     padding: 20px;
     img {
-        width: 100% !important;
+        width: auto;
     }
 
 }
@@ -1701,14 +1705,12 @@ display: none;
 
 .join-today-img-box {
     position: absolute;
-    top: -70%;
+    top: -43%;
     z-index: 3;
     right: 0px;
     width: 62%;
 
-   img  {
-    width: 400px;
-    }
+  
 }
 
 
@@ -1743,6 +1745,12 @@ display: none;
 
 @media only screen and (min-width: 1200px) {
 
+
+.header-shade-inner-pages {
+  height: 1400px;
+}
+
+
   .menu-btn {
     display: none;
   }
@@ -1755,6 +1763,31 @@ display: none;
 
 
 @media only screen and (max-width: 1023px) {
+
+ 
+
+  .security-bg {
+    background-image: url(../images/security-bg.png);
+    height: 212px;
+    position: absolute;
+    width: 100%;
+    top: -82px;
+    left: -19px;
+    background-size: 300px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+
+
+  .header-title {
+    margin-left: 0%;
+    display: flex;
+    justify-content: end;
+    text-align: center;
+    margin-top: 110px;
+}
   
 .full-width-object-right,
 .full-width-object-left,
@@ -1782,8 +1815,61 @@ header {
 
 
   @media only screen and (max-width: 1199px) {
-  
 
+    .circle-container {
+      margin-top: 25px;
+  }
+  
+    .inner-pages-security-img {
+      max-width: 95%;
+      margin-bottom: 25px;
+  }
+
+
+  .hide-till-1200 {
+    display: none;
+  }
+
+    .security-bg {
+      background-image: url(../images/security-bg.png);
+      height: 212px;
+      position: absolute;
+      width: 100%;
+      top: -82px;
+      left: -19px;
+      background-size: 300px;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-position: center top;
+  }
+
+
+    .inner-page-container {     
+      margin-top: 70px;  
+  }
+
+  .inner-page-controller {
+    margin-top: 70px;
+}
+
+
+
+
+
+    .header-title {
+      margin-left: 0%;
+      display: flex;
+      justify-content: end;
+      text-align: center;
+      margin-top: 160px;
+  }
+
+
+    .header-shade-inner-pages {
+      background-size: 420px;
+      top: 0px;
+      height: 1200px;
+    }
     
     header {
       .container {
@@ -1800,3 +1886,80 @@ header {
       
 
 
+
+
+      @media only screen and (min-width: 1200px) and (max-width: 1500px)  {
+
+        .header-shade-inner-pages {
+          background-image: url(../images/header-shade.svg);
+          
+          background-repeat: no-repeat;
+          // position: absolute;
+          // width: 100%;
+          // left: -30%;
+          width: 100%;
+          position: absolute;
+          left: calc(100% - 75%);
+          margin-left: -50vw;
+          z-index: -1;
+
+          &::after {
+            content: url("");
+            position: absolute;
+            width: 92%;
+            left: 0px;
+            height: 2px;
+            background-color: #30d58e;
+            top: 301px;
+         
+        
+          }
+
+
+
+      }
+
+
+
+      }
+
+
+
+      @media only screen and (min-width: 1501px) and (max-width: 1900px)  {
+
+        .header-shade-inner-pages {
+          background-image: url(../images/header-shade.svg);
+        
+          background-repeat: no-repeat;
+          // position: absolute;
+          // width: 100%;
+          // left: -30%;
+          width: 100%;
+          position: absolute;
+          left: calc(100% - 65%);
+          margin-left: -50vw;
+          z-index: -1;
+
+
+          &::after {
+            content: url("");
+            position: absolute;
+            width: 80%;
+            left: 0px;
+            height: 2px;
+            background-color: #30d58e;
+            top: 301px;
+         
+        
+          }
+
+
+
+      }
+
+
+
+      }
+
+
+ 

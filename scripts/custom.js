@@ -375,3 +375,13 @@ $(document).ready(function() {
 	if (scroll >= 100) sticky.addClass('sticky');
 	else sticky.removeClass('sticky');
   });
+
+
+
+  $(window).scroll(function(){
+	var sticky = $('.inner-page-container'),
+		scroll = $(window).scrollTop();
+  
+	if (scroll >= 100) sticky.addClass('inner-page-controller');
+	else sticky.removeClass('inner-page-controller');
+  });
