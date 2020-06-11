@@ -264,3 +264,43 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 }
 
 
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  /* Safari and Chrome */
+
+  
+  /* Safari only override */
+
+
+  ::i-block-chrome,.feature-long-path {  
+  
+    &::after {
+      display: none; 
+    }
+    &::before {
+         display: none; 
+  
+    }
+  
+  
+  }
+
+
+  ::i-block-chrome,.small-vertical {  
+  
+    &::after {
+      display: none; 
+    }
+    &::before {
+         display: none; 
+  
+    }
+  
+  
+  }
+  
+
+
+
+
+  }
+

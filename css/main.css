@@ -8076,6 +8076,18 @@ _::-webkit-full-page-media .feature-long-path::after, _:future .feature-long-pat
 _::-webkit-full-page-media .feature-long-path::before, _:future .feature-long-path::before, :root .safari_only .feature-long-path::before {
   display: none; }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Chrome */
+  /* Safari only override */
+  ::i-block-chrome::after, .feature-long-path::after {
+    display: none; }
+  ::i-block-chrome::before, .feature-long-path::before {
+    display: none; }
+
+  ::i-block-chrome::after, .small-vertical::after {
+    display: none; }
+  ::i-block-chrome::before, .small-vertical::before {
+    display: none; } }
 @-webkit-keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);
