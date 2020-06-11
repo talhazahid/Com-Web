@@ -475,8 +475,7 @@ header {
     position: fixed;
     display: block;
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);
-    background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0.001) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);   
     /* bottom: 0px; */
     height: 80px;
     width: 100%;
@@ -522,7 +521,7 @@ header {
     display: block;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);
-    background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0.001) 100%);
+
     /* bottom: 0px; */
     height: 80px;
     width: 100%;

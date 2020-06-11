@@ -225,3 +225,42 @@
     margin-bottom: 30px;
   }
 }
+
+
+
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+
+
+
+  .small-vertical {
+  
+    &::after {
+      display: none; 
+    }
+  
+  
+    &::before {
+      display: none;  
+  
+    }
+  
+  }
+  
+  
+  .feature-long-path {  
+  
+    &::after {
+      display: none; 
+    }
+    &::before {
+         display: none; 
+  
+    }
+  
+  
+  }
+
+}
+
+
