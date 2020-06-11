@@ -6827,6 +6827,8 @@ body {
   overflow-x: hidden; }
 
 header {
+  position: relative;
+  z-index: 100;
   transition: all 0.25s ease-in-out; }
   header .logo {
     background-color: white;
@@ -6845,10 +6847,12 @@ header {
   position: absolute;
   width: 100%;
   left: 0px;
-  z-index: -1; }
+  z-index: 1; }
 
 .hero-section {
-  height: 700px; }
+  height: 700px;
+  position: relative;
+  z-index: 5; }
 
 .header-desktop-menu {
   display: flex;
@@ -7119,26 +7123,6 @@ header {
 
 .small-vertical {
   position: relative; }
-  .small-vertical::after {
-    content: "";
-    position: fixed;
-    display: block;
-    background: white;
-    bottom: 0px;
-    height: 80px;
-    width: 100%;
-    bottom: 150px;
-    border: 0px !important; }
-  .small-vertical::before {
-    content: "";
-    position: fixed;
-    display: block;
-    background: white;
-    /* bottom: 0px; */
-    height: 150px;
-    width: 100%;
-    bottom: 0px;
-    border: 0px !important; }
 
 .feature-long-path {
   display: flex;
@@ -7234,7 +7218,7 @@ header {
   display: flex;
   margin-bottom: 200px; }
   .join-today::after {
-    content: url("");
+    content: '';
     position: absolute;
     display: block;
     background: #D9F4FF;
@@ -7285,7 +7269,7 @@ footer {
     list-style: none;
     padding: 0px; }
   footer::after {
-    content: url("");
+    content: '';
     position: absolute;
     display: block;
     background-image: url(../images/footer-grade.svg);
@@ -7305,7 +7289,7 @@ footer {
     position: relative; }
     .footer-left-box .left-side::after {
       position: absolute;
-      content: url("");
+      content: '';
       height: 195px;
       background: #EDEDED;
       width: 1px;
@@ -7533,7 +7517,7 @@ footer {
     cursor: pointer; }
   .faq-search-box::after {
     position: absolute;
-    content: url("");
+    content: '';
     height: 32px;
     width: 32px;
     left: 20px;
@@ -7772,7 +7756,7 @@ body {
   background-color: #147AFF;
   position: relative; }
   .current .item .thumb-circle::before {
-    content: url("");
+    content: '';
     position: absolute;
     width: 100vh;
     height: 3px;
@@ -8066,27 +8050,61 @@ body {
     margin-top: 30px;
     margin-bottom: 30px; }
 
-_::-webkit-full-page-media .small-vertical::after, _:future .small-vertical::after, :root .safari_only .small-vertical::after {
-  display: none; }
-_::-webkit-full-page-media .small-vertical::before, _:future .small-vertical::before, :root .safari_only .small-vertical::before {
-  display: none; }
-_::-webkit-full-page-media .feature-long-path::after, _:future .feature-long-path::after, :root .safari_only .feature-long-path::after {
-  display: none; }
-_::-webkit-full-page-media .feature-long-path::before, _:future .feature-long-path::before, :root .safari_only .feature-long-path::before {
-  display: none; }
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer; }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* Safari and Chrome */
-  /* Safari only override */
-  ::i-block-chrome::after, .feature-long-path::after {
-    display: none; }
-  ::i-block-chrome::before, .feature-long-path::before {
-    display: none; }
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  pointer-events: none; }
 
-  ::i-block-chrome::after, .small-vertical::after {
-    display: none; }
-  ::i-block-chrome::before, .small-vertical::before {
-    display: none; } }
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -62px;
+  padding: 7px;
+  width: 125px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2; }
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51, 51, 51, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: '';
+  font-size: 0;
+  line-height: 0; }
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1; }
+
 @-webkit-keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);

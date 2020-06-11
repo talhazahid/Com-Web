@@ -64,6 +64,9 @@ body {
 
 header {
 
+  position: relative;
+  z-index: 100;
+
   transition: all 0.25s ease-in-out;
 
 
@@ -94,13 +97,13 @@ header {
   // left:-webkit-calc(100% - 350px);
   // left:-moz-calc(100% - 350px);
   // left:calc(100% - 350px);
-
-
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero-section {
   height: 700px;
+  position: relative;
+  z-index: 5;
 }
 
 .header-desktop-menu {
@@ -470,36 +473,35 @@ header {
 
   position: relative;
 
-  &::after {
-    content: "";
-    position: fixed;
-    display: block;
-    // background: rgb(255,255,255);
-    // background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);   
-    background: white;
-    bottom: 0px;
-    // bottom: 0px;
-    height: 80px;
-    width: 100%;
-    bottom: 150px;
-    border: 0px !important;
-  }
+  // &::after {
+  //   content: '';
+  //   position: fixed;
+  //   display: block;
+  
+  //   background: white;
+  //   bottom: 0px;
+  //   // bottom: 0px;
+  //   height: 80px;
+  //   width: 100%;
+  //   bottom: 150px;
+  //   border: 0px !important;
+  // }
 
 
-  &::before {
-    content: "";
-    position: fixed;
-    display: block;
-    background:white;
-
-    /* bottom: 0px; */
-    height: 150px;
-    width: 100%;
-    bottom: 0px;
-    border: 0px !important;
+  // &::before {
+  //   content: '';
+  //   position: fixed;
+  //   display: block;
+  //   background:white;
 
 
-  }
+  //   height: 150px;
+  //   width: 100%;
+  //   bottom: 0px;
+  //   border: 0px !important;
+
+
+  // }
 
 }
 
@@ -638,7 +640,7 @@ header {
 
 
   &::after {
-    content: url('');
+    content: '';
     position: absolute;
     display: block;
     background: #D9F4FF;
@@ -714,12 +716,13 @@ footer {
 
 
   &::after {
-    content: url('');
+    content: '';
     position: absolute;
     display: block;
     background-image: url(../images/footer-grade.svg);
     bottom: 0px;
     height: 100%;
+
     width: 50%;   
     right: 0px;
     background-repeat: no-repeat;
@@ -743,7 +746,7 @@ footer {
 
     &::after {
       position: absolute;
-      content: url('');
+      content: '';
       height:195px;
       background: #EDEDED;
       width: 1px;
@@ -1123,7 +1126,7 @@ right: 0;
   
   &::after {
     position: absolute;
-    content: url("");
+    content: '';
     height: 32px;
     width: 32px;
     left: 20px;
