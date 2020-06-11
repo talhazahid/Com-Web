@@ -352,38 +352,6 @@ header {
 
 }
 
-.small-vertical {
-
-  position: relative;
-
-  &::after {
-    content: "";
-    position: fixed;
-    display: block;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);
-    /* bottom: 0px; */
-    height: 80px;
-    width: 100%;
-    bottom: 150px;
-  }
-
-
-  &::before {
-    content: "";
-    position: fixed;
-    display: block;
-    background:white;
-
-    /* bottom: 0px; */
-    height: 150px;
-    width: 100%;
-    bottom: 0px;
-
-
-  }
-
-}
 
 .how-it-works {
   position: relative;
@@ -498,6 +466,43 @@ header {
 
 
 
+.small-vertical {
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: fixed;
+    display: block;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0.001) 100%);
+    /* bottom: 0px; */
+    height: 80px;
+    width: 100%;
+    bottom: 150px;
+    border: 0px !important;
+  }
+
+
+  &::before {
+    content: "";
+    position: fixed;
+    display: block;
+    background:white;
+
+    /* bottom: 0px; */
+    height: 150px;
+    width: 100%;
+    bottom: 0px;
+    border: 0px !important;
+
+
+  }
+
+}
+
+
 .feature-long-path {
   display: flex;
   justify-content: center;
@@ -512,10 +517,12 @@ header {
 
   &::after {
     content: "";
+    border: 0px !important;
     position: fixed;
     display: block;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);
+    background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0.001) 100%);
     /* bottom: 0px; */
     height: 80px;
     width: 100%;
@@ -523,6 +530,7 @@ header {
   }
   &::before {
     content: "";
+    border: 0px !important;
     position: fixed;
     display: block;
     background:white;

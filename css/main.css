@@ -7047,28 +7047,6 @@ header {
   position: relative;
   z-index: 2; }
 
-.small-vertical {
-  position: relative; }
-  .small-vertical::after {
-    content: "";
-    position: fixed;
-    display: block;
-    background: white;
-    background: linear-gradient(0deg, white 0%, rgba(255, 0, 0, 0) 100%);
-    /* bottom: 0px; */
-    height: 80px;
-    width: 100%;
-    bottom: 150px; }
-  .small-vertical::before {
-    content: "";
-    position: fixed;
-    display: block;
-    background: white;
-    /* bottom: 0px; */
-    height: 150px;
-    width: 100%;
-    bottom: 0px; }
-
 .how-it-works {
   position: relative;
   z-index: 2; }
@@ -7139,6 +7117,31 @@ header {
 .feature-two-columns-margin {
   margin-top: 135px; }
 
+.small-vertical {
+  position: relative; }
+  .small-vertical::after {
+    content: "";
+    position: fixed;
+    display: block;
+    background: white;
+    background: linear-gradient(0deg, white 0%, rgba(255, 0, 0, 0) 100%);
+    background-image: -webkit-linear-gradient(0deg, white 0%, rgba(255, 0, 0, 0.001) 100%);
+    /* bottom: 0px; */
+    height: 80px;
+    width: 100%;
+    bottom: 150px;
+    border: 0px !important; }
+  .small-vertical::before {
+    content: "";
+    position: fixed;
+    display: block;
+    background: white;
+    /* bottom: 0px; */
+    height: 150px;
+    width: 100%;
+    bottom: 0px;
+    border: 0px !important; }
+
 .feature-long-path {
   display: flex;
   justify-content: center;
@@ -7151,16 +7154,19 @@ header {
   z-index: -1; }
   .feature-long-path::after {
     content: "";
+    border: 0px !important;
     position: fixed;
     display: block;
     background: white;
     background: linear-gradient(0deg, white 0%, rgba(255, 0, 0, 0) 100%);
+    background-image: -webkit-linear-gradient(0deg, white 0%, rgba(255, 0, 0, 0.001) 100%);
     /* bottom: 0px; */
     height: 80px;
     width: 100%;
     bottom: 150px; }
   .feature-long-path::before {
     content: "";
+    border: 0px !important;
     position: fixed;
     display: block;
     background: white;
