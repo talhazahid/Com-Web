@@ -19,6 +19,21 @@ input {
       
   }
 
+  a{
+    color: #26AD94;
+  }
+
+
+  *, *:after, *:before  {
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    }
+
+
 
   .sticky {
     position: fixed;
@@ -177,6 +192,7 @@ header {
   font-family: "Roboto Condensed", sans-serif;
   padding: 30px 60px;
   margin-left: 10px;
+  cursor: pointer;
 
   span {
     margin-right: 7px;
@@ -320,6 +336,58 @@ header {
   padding-right: 70px;
   position: relative;
   top: 6px;
+
+
+
+
+
+
+
+}
+
+.over-vertical-line {
+
+  position: relative;
+  z-index: 2;
+
+}
+
+.small-vertical {
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: fixed;
+    display: block;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 100%);
+    /* bottom: 0px; */
+    height: 80px;
+    width: 100%;
+    bottom: 150px;
+  }
+
+
+  &::before {
+    content: "";
+    position: fixed;
+    display: block;
+    background:white;
+
+    /* bottom: 0px; */
+    height: 150px;
+    width: 100%;
+    bottom: 0px;
+
+
+  }
+
+}
+
+.how-it-works {
+  position: relative;
+  z-index: 2;
 }
 
 .feature-two-columns {
@@ -413,6 +481,7 @@ header {
     font-size: 28px;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
   }
 
   .feature-text-box-small-text {
@@ -442,7 +511,7 @@ header {
 
 
   &::after {
-    content: url('');
+    content: "";
     position: fixed;
     display: block;
     background: rgb(255,255,255);
@@ -452,10 +521,8 @@ header {
     width: 100%;
     bottom: 150px;
   }
-
-
   &::before {
-    content: url('');
+    content: "";
     position: fixed;
     display: block;
     background:white;
@@ -595,6 +662,7 @@ header {
   color: #2D2D2D;
   font-size: 68px;
   line-height: 63px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .apps-btns {
@@ -748,6 +816,11 @@ footer {
     ul {
       font-family: 'Roboto', sans-serif;
       line-height: 30px;
+
+      li {
+        color: white;
+        font-size: 14px;
+      }
       li a {
         color: white;
         font-size: 14px;
@@ -1192,7 +1265,7 @@ color:#272727;
 
 .modal-dialog {
   max-width: 100%;
-  overflow: hidden;
+  overflow: hidden !important;
 
 
 }
@@ -1234,4 +1307,36 @@ color:#272727;
   right: 0px;
   top: -50px;
   font-size: 44px;
+  opacity: 1;
+}
+
+
+
+.empty-space {
+  height: 400px;
+}
+
+
+
+.highlight {
+  background: #ffffc4;
+}
+
+
+.modal-open {
+  position: fixed;
+  width: 100%;
+}
+
+
+
+
+
+.gradient-center-img {
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgba(119, 208, 255, 0.2), rgba(143, 216, 255, 0.2), rgba(165, 223, 255, 0.2), rgba(186, 231, 255, 0.2), rgba(206, 238, 255, 0.2));
 }

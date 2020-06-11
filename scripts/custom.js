@@ -385,3 +385,63 @@ $(document).ready(function() {
 	if (scroll >= 100) sticky.addClass('inner-page-controller');
 	else sticky.removeClass('inner-page-controller');
   });
+
+
+
+
+  $(function() {
+	$('a[href*=#]:not([href=#])').click(function() {
+	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+		  $('html,body').animate({
+			scrollTop: target.offset().top-300, scrollLeft:target.offset()
+		  }, 1000);
+		  return false;
+		}
+	  }
+	});
+  });
+
+
+
+
+  $(document).ready(function() {
+	$('html, body').hide();
+	if (window.location.hash) {
+		setTimeout(function() {
+			$('html, body').scrollTop(0).show();
+			$('html, body').animate({
+				scrollTop: $(window.location.hash).offset().top-300
+				}, 1000)
+		}, 0);
+	}
+	else {
+		$('html, body').show();
+	}
+});
+
+
+$('.download-click').on('click', function(){
+	$("body").removeClass("pushy-open-right");
+});
+
+
+$('.modal-backdrop').on('click', function(){
+	alert("Hello! I am an alert box!!");
+	$(".close").click()
+});
+
+
+
+
+
+
+
+
+
+
+/////////// TOOL TIP
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile App Redirection</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161741300-7"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-161741300-7');
+	</script>
+</head>
+<body>
+	<script>
+		$(document).ready(function () {
+			if (navigator.appVersion.indexOf("Mac") != -1) {
+				location.href = "https://apps.apple.com/ae/app/comera/id1462023656";
+			} else {
+				location.href = "https://play.google.com/store/apps/details?id=com.is.core.app";
+			}
+		});
+	</script>
+</body>
+</html>
